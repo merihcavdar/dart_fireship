@@ -1,15 +1,16 @@
-void main(List<String> args) {
+void main() {
   int? age;
   print(age == null);
+  age = 43;
 
-  String? answer;
-
-  //String result = answer;
-  String result = answer!; // ! assertion operator
+  if (age != null) {
+    print('age is not null');
+  }
 }
 
 class Animal {
-  late final String _size; // late => assign a non-nullable value later
+  late final String _size;
+  // late => assign a non-nullable value later
 
   void goBig() {
     _size = 'big';
